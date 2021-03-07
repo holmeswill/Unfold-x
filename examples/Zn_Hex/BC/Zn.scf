@@ -1,0 +1,44 @@
+&CONTROL
+   calculation      = 'scf'
+   verbosity        = 'high'
+   outdir           = './out/'
+   prefix           = 'Zn'
+   etot_conv_thr    = 2e-05
+   forc_conv_thr    = 0.0001
+   pseudo_dir       = '../pseudo/'
+/
+&SYSTEM
+   ecutwfc          = 40.0
+   ecutrho          = 320.0
+   occupations      = 'smearing'
+   degauss          = 0.0146997236
+   smearing         = 'cold'
+   ntyp             = 1
+   nat              = 2
+   ibrav            = 0
+/
+&ELECTRONS
+   electron_maxstep = 80
+   conv_thr         = 4e-07
+   mixing_beta      = 0.4
+/
+&IONS
+/
+&CELL
+/
+
+ATOMIC_SPECIES
+Zn 65.38 zn_pbe_v1.uspp.F.UPF
+
+K_POINTS automatic
+9 9 4  0 0 0
+
+CELL_PARAMETERS angstrom
+2.62673047000000 0.00000000000000 0.00000000000000
+-1.31336523500000 2.27481531591464 0.00000000000000
+0.00000000000000 0.00000000000000 5.20723400000000
+
+ATOMIC_POSITIONS crystal
+Zn 0.6666666700 0.3333333300 0.7500000000 
+Zn 0.3333333300 0.6666666700 0.2500000000 
+

@@ -1,0 +1,82 @@
+                    --== unfold.x ==--
+
+=> IMPORTANT INFO
+
+The code is also available on bitbucket: https://bitbucket.org/bonfus/unfold-x
+
+=> INTRODUCTION
+
+This is a simple code to unfold band structures of first-principles 
+supercell calculations using the method described in Phys. Rev. B 85, 085201 (2012).
+
+=> INSTALL
+
+Go to the root directory of the QE distribution and configure
+the code if you have not done so already:
+
+    cd /path/to/espresso-6.5
+    ./configure --some-options
+
+Next move to the path where 'unfold.x' has been extracted and build with:
+
+    cd unfold
+    make QE_ROOT=/path/to/espresso-6.5
+
+This will create two executable files in the `bin` directory:
+unfold.x and unklist.x
+
+=> INPUT
+
+See comments in examples' input.
+
+
+=> USAGE
+
+1) Run supercell scf calculation.
+2) Define a path in the basecell (big BZ!) reciprocal space and write it 
+   using card UNKPTS (same options as in K_POINTS card, but for 'Gamma')
+3) Use TRMAT card to define the relationship between the base cell and 
+   the supercell (see examples for details).
+4) Use unklist.x to produce the k-points for the supercell 'bands' calculation. 
+   The k-points are printed to stdout.
+5) run a 'bands' calculation with k-points from 4) (remember to use
+   wf_collect=.true.)
+   Alternatively, if you didn't use symreduce=.true. in 4), you can run 
+   a nscf with noinv=.true. and nosym=.true. .
+6) run unfold.x
+7) Plot the results with gnuplot (command given in output).
+
+
+=> TOOLS
+
+A python script to parse P_Km binary files is included. 
+
+=> CREDITS
+
+The code is written and maintained by Pietro Bonfa' (pietro.bonfa at fis dot unipr dot it)
+and thoroughly tested by Martin Gmitra (http://www.physik.uni-regensburg.de/forschung/fabian/pages/mainframes/people/members/MartinGmitra.html).
+He also contributed with the Graphene example.
+
+=> NOTES
+Pseudopotentials are taken from the QE website (http://www.quantum-espresso.org/)
+and from the GBRV library (http://www.physics.rutgers.edu/gbrv/).
+
+=> NSFAQ (Not so frequently asked questions)
+
+These are the problems that I encountered while testing the code.
+
+* Error: 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     from davcio : error #        10
+     error while reading from file
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+** Sol. : Set wf_collect=.true.
+
+* Error: kpoint calculated but not found during unfolding
+
+** Sol.1: Write k points with more figures!
+** Sol.2: You messed up symmetry. For example, if you run a nscf with
+          noinv and nosym, symmetry information are lost and when you 
+          run unfold.x it complains about missing k-points because
+          it cannot use symmetry to reduce the number of k-points anymore.

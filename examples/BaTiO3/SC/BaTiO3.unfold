@@ -1,0 +1,32 @@
+&inputun
+  prefix='batio3'                    ! prefix of scf calculation
+  outdir='./tmp/'                    ! where data 
+  Emin=6                             ! min energy for spectral function    
+  Emax=12                            ! max energy for spectral function
+  DeltaE=0.05                        ! energy steps from Emin to Emax
+  w=0.15                             ! broadening for delta function in spectral function 
+  filout='./BaTiO_Unfolded_SPFN.dat' ! output file 
+  nscfklist=.false.                  ! if .true. prints the list of kpoints for nscf calculation
+  symreduce=.true.                   ! use symmetry to reduce the number of nscf kpoints (probably buggy)
+  verbose=.false.                    ! print a lot of debug stuff
+  write_pkm=.true.                   ! output P_Km coefficients and corresponding eigenvalues. WARNING: nspin*nkpt files will be created!
+  kpathunit='tpiba'                  ! whether the kpath should be produce from Cartesian or Crystal (fractional) coordinates. Default: same as input given in UNKPTS.
+/
+
+
+
+TRMAT
+1 0 0
+0 1 0
+0 0 2
+
+UNKPTS crystal_b
+8
+ 0.0  0.0  0.0  30 !G
+ 0.5  0.0  0.0  30 !X
+ 0.5  0.0  0.5  30 !R
+ 0.0  0.0  0.0  30 !G
+ 0.5  0.5  0.0  30 !M
+ 0.5  0.5  0.5  30 !A
+ 0.0  0.0  0.5  30 !Z
+ 0.0  0.0  0.0  30 !G

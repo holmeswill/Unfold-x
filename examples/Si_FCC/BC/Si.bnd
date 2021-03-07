@@ -1,0 +1,27 @@
+ &control
+    calculation='bands'
+    pseudo_dir = '../../ppt/',
+    outdir='../tmp/'
+    prefix='si',
+ /
+ &system
+    ibrav=2, celldm(1)=10.274, nat=2, ntyp=1,
+    ecutwfc=50.0, nspin=1, ecutrho=300.0
+    occupations='smearing', smearing='cold', degauss=0.02
+ /
+ &electrons
+    conv_thr = 1.0e-9
+ /
+ATOMIC_SPECIES
+ Si 28 si_pbe_v1.uspp.F.UPF
+ATOMIC_POSITIONS
+ Si 0.00 0.00 0.00
+ Si 0.25 0.25 0.25
+K_POINTS crystal_b
+6
+  0.25 0.75 0.50  10 ! W (1/4,3/4,1/2)  
+  0.00 0.00 0.00  10 ! G (0,0,0)
+  0.00 0.50 0.50  10 ! X (0,1/2,1/2) 
+  0.25 0.75 0.50  10 ! W (1/4,3/4,1/2)
+  0.50 0.50 0.50  10 ! L (1/2,1/2,1/2)
+  0.00 0.00 0.00  10 ! G (0,0,0)

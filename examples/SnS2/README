@@ -1,0 +1,18 @@
+This example is for unfolding the band structure of sqrt(3) x sqrt(3) x 1 hexagonal SnS2 supercell.
+
+This example also shows how the npool parallelization works for unfold.x for 
+npool = 2, 6, 8, 12, and 24 over 96 processors.
+
+This includes all the input files (scf.in, band.in, unklist.in, unfold.in) along with the run script "run.sh".
+
+Using plot.gnu and run-gnuplot script, .png files are produced.
+
+Please update the path for gnuplot executable in run-gnuplot script while running the gnuplot.
+
+Thanks!
+
+Gyanu Kafle
+Binghamton University,
+New York, USA
+
+

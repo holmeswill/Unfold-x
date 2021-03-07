@@ -1,0 +1,4 @@
+unfold.o : openfil_pp.o
+unfold.o : unfold_input_parameters.o
+unfold.o : unfold_read_cards.o
+unfold.o : unfold_data.o

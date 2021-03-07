@@ -1,0 +1,21 @@
+ &control
+    calculation='scf'
+    restart_mode='from_scratch',    
+    pseudo_dir = '../../ppt/',
+    outdir='../tmp/'
+    prefix='fe'
+ /
+ &system
+    ibrav = 1, celldm(1) =4.3, nat= 1, ntyp= 1,
+    ecutwfc = 50.0, nspin = 1, ecutrho=300.0
+    occupations='smearing', smearing='cold', degauss=0.02
+ /
+ &electrons
+    conv_thr = 1.0e-9
+ /
+ATOMIC_SPECIES
+ Fe 55.85 fe_pbe_v1.uspp.F.UPF
+ATOMIC_POSITIONS
+ Fe 0.0 0.0 0.0
+K_POINTS automatic
+16 16 16 0 0 0

@@ -1,0 +1,7 @@
+ &bands
+    prefix  = 'grp'
+    outdir = '../tmp'
+    filband = 'bands.dat'
+    no_overlap = .true.
+ /
+

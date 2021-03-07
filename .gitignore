@@ -1,0 +1,8 @@
+*.bz2
+old_stuff
+bin
+*.o
+*.x
+*.mod
+*.a
+*.dat

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+for pool in 2 6 8 12 24;
+do
+
+cp SnS2.dat_$pool SnS2.dat
+gnuplot plot.gnu
+mv sns-npool.png sns-npool-$pool.png
+
+done
+

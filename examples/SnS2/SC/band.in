@@ -1,0 +1,50 @@
+&control
+    calculation      = 'bands'
+    prefix           = 'SnS2'
+    restart_mode     = 'from_scratch'
+    pseudo_dir       = '../',
+    outdir           = './'
+    disk_io          = 'low'
+    tstress          = .true.
+    tprnfor          = .true.
+    etot_conv_thr    = 1.0d-6
+    forc_conv_thr    = 1.0d-4
+    wf_collect       = .true.
+    verbosity        = 'high'
+ /
+ &system
+    ibrav            = 4
+    celldm(1)        = 12.05636422
+    celldm(3)        =  0.91839777
+    nat              = 9
+    ntyp             = 2
+    ecutwfc          = 60
+    ecutrho          = 240
+    occupations      = 'smearing'
+    smearing         = 'mv'
+    degauss          = 0.01
+    input_dft        = 'vdw-df-ob86'
+    nbnd             = 64
+ /
+ &electrons
+    diagonalization = 'david'
+    mixing_mode = 'plain'
+    mixing_beta = 0.7
+    conv_thr =  1.0d-9
+ /
+ATOMIC_SPECIES
+S   32.06   S_ONCV_PBE-1.1.upf
+Sn  118.71  Sn_ONCV_PBE-1.1.upf
+
+ATOMIC_POSITIONS (crystal)
+S       -0.000000000   0.333333330   0.252671293
+S        0.333333330   0.000000000   0.252671293
+S        0.666666670   0.666666670   0.252671293
+S       -0.000000000   0.666666670   0.747328707
+S        0.666666670   0.000000000   0.747328707
+S        0.333333330   0.333333330   0.747328707
+Sn       0.000000000   0.000000000   0.000000000
+Sn       0.333333333   0.666666667   0.000000000
+Sn       0.666666667   0.333333333   0.000000000
+
+K_POINTS tpiba

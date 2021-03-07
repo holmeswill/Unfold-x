@@ -1,0 +1,27 @@
+&inputun
+  prefix='FeSC'                ! prefix of scf calculation
+  outdir='../tmp/'             ! where data 
+  Emin=10                      ! min energy for spectral function    
+  Emax=20                      ! max energy for spectral function
+  DeltaE=0.005                 ! energy steps from Emin to Emax
+  w=0.02                       ! broadening for delta function in spectral function 
+  filout='./Fe-unfold.dat'     ! output file 
+  nscfklist=.false.            ! (DEPRECATED) if .true. prints the list of kpoints for nscf calculation
+  symreduce=.false.            ! use symmetry to reduce the number of nscf kpoints (probably buggy)
+  verbose=.false.              ! print a lot of debug stuff
+  write_pkm=.false.            ! output P_Km coefficients and corresponding eigenvalues. WARNING: nspin x nkpt files will be created!
+  kpathunit='tpiba'            ! units for evaluating kpath output. Default: same as UNKPTS input
+/
+
+TRMAT
+2 0 0
+0 2 0
+0 0 2
+
+UNKPTS tpiba_b
+4
+ 0.00  0.00  0.00    20 !G
+-0.50  0.50  0.50    20 !H
+ 0.00  0.00  0.50    20 !N
+ 0.25  0.25  0.25    20 !P
+

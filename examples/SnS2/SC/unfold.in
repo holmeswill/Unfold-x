@@ -1,0 +1,31 @@
+&inputun
+  prefix='SnS2'                      ! prefix of scf calculation
+  outdir='./'                        ! where data
+  Emin=-10                           ! min energy for spectral function
+  Emax=30                            ! max energy for spectral function
+  DeltaE=0.1                       ! energy steps from Emin to Emax
+  w=0.5                             ! broadening for delta function in spectral function
+  filout='./SnS2.dat'                ! output file
+  nscfklist=.false.                  ! if .true. prints the list of kpoints for nscf calculation
+  symreduce=.false.                  ! use symmetry to reduce the number of nscf kpoints (probably buggy)
+  verbose=.false.                    ! print a lot of debug stuff
+  write_pkm=.false.                  ! output P_Km coefficients and corresponding eigenvalues. WARNING: nspin x nkpt files will be created!
+  kpathunit='tpiba'
+/
+
+TRMAT
+2 1 0
+-1 1 0
+0 0 1
+
+UNKPTS crystal_b
+8
+0.000   0.000   0.000 40  ! G
+0.500   0.000   0.000 40  ! M
+0.3333  0.3333  0.000 40  ! K
+0.000   0.000   0.000 40  ! G
+0.000   0.000   0.500 40  ! A
+0.500   0.000   0.500 40  ! L
+0.3333  0.3333  0.500 40  ! H
+0.000   0.000   0.500 1   ! A
+

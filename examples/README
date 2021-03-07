@@ -1,0 +1,39 @@
+=== EXAMPLES
+
+This is a short description of the examples. 
+In the subdirectories, BC stands for base cell and SC stands for supercell.
+
+To plot the results with gnuplot use the following commands:
+
+cd example_dir/SC
+grep -A1 set unfold_out_file.out > plot.gnu
+gnuplot -persist plot.gnu
+
+you can also superimpose the BC band structure by adding
+
+replot '../BC/Fe.bands.dat' u 1:2:($2*0) w p ps 0.5
+
+to plot.gnu.
+
+WARNING: since all the examples deal with supercells it can take up to 
+several hours to run them on a standard laptop.
+
+== List of examples
+
+BaTiO3:   this is example shows how to unfold a tetragonal cell doubled 
+          along the c direction
+          
+Fe_SC:    this example shows how to unfold a sqrt(2) x sqrt(2) obtained 
+          from a simple cubic cell.
+          
+Fe_BCC:   this example shows how to unfold the 2x2x2 BCC cell of magnetic Fe.
+          
+Graphene: here we unfold 2x2 graphene supercell (example by Martin Gmitra)
+
+Si_FCC:   Unfold bands from simple cubic to FCC structure.
+
+FeN4:     A triclinic cell.
+
+Zn_Hex:   Unfolding sqrt(3) x sqrt(3) x 1 supercell in hexagonal Zn.
+
+SnS2:     sqrt(3) x sqrt(3) x 1 supercell with pool parallelism (by Gyanu Kafle)

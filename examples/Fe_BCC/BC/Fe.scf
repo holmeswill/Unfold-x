@@ -1,0 +1,28 @@
+&control
+  calculation = 'scf'
+  prefix='Fe',
+  pseudo_dir = '../../ppt/',
+  outdir='../tmp/'
+/
+&system
+  ibrav= 3,
+  celldm(1) =5.42,
+  nat= 1,
+  ntyp= 1,
+  nspin=2,
+  starting_magnetization(1)=0.5,
+  occupations='smearing',
+  smearing='mp',
+  degauss=0.04,
+  ecutwfc =45.0,
+  ecutrho =300.0
+/
+&electrons
+  conv_thr = 1.0d-10
+/
+ATOMIC_SPECIES
+Fe 0.0 fe_pbe_v1.uspp.F.UPF
+ATOMIC_POSITIONS
+Fe 0.0000000 0.00000000 0.0
+K_POINTS AUTOMATIC
+8 8 8 1 1 1 

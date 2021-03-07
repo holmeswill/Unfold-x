@@ -1,0 +1,137 @@
+
+     Program UNFOLD v.6.7MaX starts on 26Dec2020 at  0:27:47 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Serial multi-threaded version, running on    1 processor cores
+
+     Reading xml data from directory:
+
+     ../tmp/sisc.save/
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum        2537    1685    489                95193    51867    8121
+
+     Reading collected, re-writing distributed wavefunctions
+     The determinant of TRMAT is:   4.0
+     Supercell crystal axes: (cart. coord. in units of SuperCell_alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.000000   1.000000   0.000000 )  
+               a(3) = (   0.000000   0.000000   1.000000 )  
+
+     Supercell reciprocal axes: (cart. coord. in units 2 pi/SC_alat)
+               b(1) = (  1.000000  0.000000  0.000000 )  
+               b(2) = (  0.000000  1.000000  0.000000 )  
+               b(3) = (  0.000000  0.000000  1.000000 )  
+
+     New crystal axes: (cart. coord. in units of SC_alat)
+               a(1) = (  -0.500000   0.000000   0.500000 )  
+               a(2) = (   0.000000   0.500000   0.500000 )  
+               a(3) = (  -0.500000   0.500000   0.000000 )  
+
+     New reciprocal axes: (cart. coord. in units 2 pi/SC_alat)
+               b(1) = ( -1.000000 -1.000000  1.000000 )  
+               b(2) = (  1.000000  1.000000  1.000000 )  
+               b(3) = ( -1.000000  1.000000 -1.000000 )  
+
+     WARNING: USPP blindly implemented!
+     Plotting command for Gnuplot
+     set pm3d map interpolate 2,2
+     splot './Si-unfold.dat' binary record=( 601,-1) format='%double' u 1:2:3
+     Doing K =    0.0000000   1.0000000   0.5000000, spin=1
+     Doing K =    0.0000000   0.9375000   0.4687500, spin=1
+     Doing K =    0.0000000   0.8750000   0.4375000, spin=1
+     Doing K =    0.0000000   0.8125000   0.4062500, spin=1
+     Doing K =    0.0000000   0.7500000   0.3750000, spin=1
+     Doing K =    0.0000000   0.6875000   0.3437500, spin=1
+     Doing K =    0.0000000   0.6250000   0.3125000, spin=1
+     Doing K =    0.0000000   0.5625000   0.2812500, spin=1
+     Doing K =    0.0000000   0.5000000   0.2500000, spin=1
+     Doing K =    0.0000000   0.4375000   0.2187500, spin=1
+     Doing K =    0.0000000   0.3750000   0.1875000, spin=1
+     Doing K =    0.0000000   0.3125000   0.1562500, spin=1
+     Doing K =    0.0000000   0.2500000   0.1250000, spin=1
+     Doing K =    0.0000000   0.1875000   0.0937500, spin=1
+     Doing K =    0.0000000   0.1250000   0.0625000, spin=1
+     Doing K =    0.0000000   0.0625000   0.0312500, spin=1
+     Doing K =    0.0000000   0.0000000   0.0000000, spin=1
+     Doing K =    0.0000000   0.0625000   0.0000000, spin=1
+     Doing K =    0.0000000   0.1250000   0.0000000, spin=1
+     Doing K =    0.0000000   0.1875000   0.0000000, spin=1
+     Doing K =    0.0000000   0.2500000   0.0000000, spin=1
+     Doing K =    0.0000000   0.3125000   0.0000000, spin=1
+     Doing K =    0.0000000   0.3750000   0.0000000, spin=1
+     Doing K =    0.0000000   0.4375000   0.0000000, spin=1
+     Doing K =    0.0000000   0.5000000   0.0000000, spin=1
+     Doing K =    0.0000000   0.5625000   0.0000000, spin=1
+     Doing K =    0.0000000   0.6250000   0.0000000, spin=1
+     Doing K =    0.0000000   0.6875000   0.0000000, spin=1
+     Doing K =    0.0000000   0.7500000   0.0000000, spin=1
+     Doing K =    0.0000000   0.8125000   0.0000000, spin=1
+     Doing K =    0.0000000   0.8750000   0.0000000, spin=1
+     Doing K =    0.0000000   0.9375000   0.0000000, spin=1
+     Doing K =    0.0000000   1.0000000   0.0000000, spin=1
+     Doing K =    0.0000000   1.0000000   0.0312500, spin=1
+     Doing K =    0.0000000   1.0000000   0.0625000, spin=1
+     Doing K =    0.0000000   1.0000000   0.0937500, spin=1
+     Doing K =    0.0000000   1.0000000   0.1250000, spin=1
+     Doing K =    0.0000000   1.0000000   0.1562500, spin=1
+     Doing K =    0.0000000   1.0000000   0.1875000, spin=1
+     Doing K =    0.0000000   1.0000000   0.2187500, spin=1
+     Doing K =    0.0000000   1.0000000   0.2500000, spin=1
+     Doing K =    0.0000000   1.0000000   0.2812500, spin=1
+     Doing K =    0.0000000   1.0000000   0.3125000, spin=1
+     Doing K =    0.0000000   1.0000000   0.3437500, spin=1
+     Doing K =    0.0000000   1.0000000   0.3750000, spin=1
+     Doing K =    0.0000000   1.0000000   0.4062500, spin=1
+     Doing K =    0.0000000   1.0000000   0.4375000, spin=1
+     Doing K =    0.0000000   1.0000000   0.4687500, spin=1
+     Doing K =    0.0000000   1.0000000   0.5000000, spin=1
+     Doing K =   -0.0312500   0.9687500   0.5000000, spin=1
+     Doing K =   -0.0625000   0.9375000   0.5000000, spin=1
+     Doing K =   -0.0937500   0.9062500   0.5000000, spin=1
+     Doing K =   -0.1250000   0.8750000   0.5000000, spin=1
+     Doing K =   -0.1562500   0.8437500   0.5000000, spin=1
+     Doing K =   -0.1875000   0.8125000   0.5000000, spin=1
+     Doing K =   -0.2187500   0.7812500   0.5000000, spin=1
+     Doing K =   -0.2500000   0.7500000   0.5000000, spin=1
+     Doing K =   -0.2812500   0.7187500   0.5000000, spin=1
+     Doing K =   -0.3125000   0.6875000   0.5000000, spin=1
+     Doing K =   -0.3437500   0.6562500   0.5000000, spin=1
+     Doing K =   -0.3750000   0.6250000   0.5000000, spin=1
+     Doing K =   -0.4062500   0.5937500   0.5000000, spin=1
+     Doing K =   -0.4375000   0.5625000   0.5000000, spin=1
+     Doing K =   -0.4687500   0.5312500   0.5000000, spin=1
+     Doing K =   -0.5000000   0.5000000   0.5000000, spin=1
+     Doing K =   -0.4687500   0.4687500   0.4687500, spin=1
+     Doing K =   -0.4375000   0.4375000   0.4375000, spin=1
+     Doing K =   -0.4062500   0.4062500   0.4062500, spin=1
+     Doing K =   -0.3750000   0.3750000   0.3750000, spin=1
+     Doing K =   -0.3437500   0.3437500   0.3437500, spin=1
+     Doing K =   -0.3125000   0.3125000   0.3125000, spin=1
+     Doing K =   -0.2812500   0.2812500   0.2812500, spin=1
+     Doing K =   -0.2500000   0.2500000   0.2500000, spin=1
+     Doing K =   -0.2187500   0.2187500   0.2187500, spin=1
+     Doing K =   -0.1875000   0.1875000   0.1875000, spin=1
+     Doing K =   -0.1562500   0.1562500   0.1562500, spin=1
+     Doing K =   -0.1250000   0.1250000   0.1250000, spin=1
+     Doing K =   -0.0937500   0.0937500   0.0937500, spin=1
+     Doing K =   -0.0625000   0.0625000   0.0625000, spin=1
+     Doing K =   -0.0312500   0.0312500   0.0312500, spin=1
+     Doing K =    0.0000000   0.0000000   0.0000000, spin=1
+     Done!

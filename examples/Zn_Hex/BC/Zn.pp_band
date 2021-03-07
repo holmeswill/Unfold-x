@@ -1,0 +1,6 @@
+
+&BANDS
+  outdir = './out/'
+  prefix = 'Zn'
+  filband='band.dat'
+/

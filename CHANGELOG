@@ -1,0 +1,10 @@
+1.0-prealpha:
+  * Added two examples: Fe_BCC and Graphene (courtesy of Martin Gmitra)
+  * Corrected many bugs in the unfolding routines. Thanks Martin Gmitra.
+  * Kpoints are now defined on the big BZ! You just need to copy/paste the 
+    k-path used in the small cell band structure calculation to UNKPTS in 
+    the unfold.x and unklist.x input files.
+  * The option nscfklist=.false. is now deprecated. The unklist.x 
+    tool does the same job except for the symreduce option.
+    Nonetheles the symreduce option has never been thoroughly tested
+    and is almost certainly buggy.
